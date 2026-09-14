@@ -1,4 +1,4 @@
-name: Build IURIX Monitor APK
+name: Build Recordatorio IURIX APK
 
 on:
   workflow_dispatch:
@@ -26,10 +26,10 @@ jobs:
       - name: Build debug APK
         run: gradle assembleDebug --no-daemon
       - name: Rename APK
-        run: cp app/build/outputs/apk/debug/app-debug.apk IURIX-Monitor-SL-v0.4.apk
+        run: cp app/build/outputs/apk/debug/app-debug.apk Recordatorio-IURIX-v0.5.apk
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
-          name: IURIX-Monitor-SL-v0.4
-          path: IURIX_Monitor_SL/IURIX-Monitor-SL-v0.4.apk
+          name: Recordatorio-IURIX-v0.5
+          path: IURIX_Monitor_SL/Recordatorio-IURIX-v0.5.apk
           retention-days: 7
